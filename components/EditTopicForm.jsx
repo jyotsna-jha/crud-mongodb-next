@@ -1,4 +1,5 @@
-"use client";
+"use client"
+
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -14,7 +15,7 @@ const EditTopicForm = ({ id, title, description }) => {
         headers: {
             "Content-type": "application/json",
           },
-          body: JSON.stringify({ title: newTitle, description: newDescription }),
+          body: JSON.stringify({ newTitle, newDescription }),
 
          });
       if (!res.ok) {
